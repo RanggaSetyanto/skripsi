@@ -1,0 +1,226 @@
+CRITICAL - 2025-04-13 08:10:49 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:15:51 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:17:47 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:23:06 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:27:05 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:27:07 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:27:13 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: paketumroh]
+in APPPATH\Views\admin\paketumroh\index.php on line 16.
+ 1 APPPATH\Views\admin\paketumroh\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\paketumroh\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\paketumroh\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/paketumroh/index', [], true)
+ 5 APPPATH\Controllers\Admin\PaketumrohController.php(16): view('admin/paketumroh/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PaketumrohController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PaketumrohController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:27:17 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: paketumroh]
+in APPPATH\Views\admin\paketumroh\index.php on line 16.
+ 1 APPPATH\Views\admin\paketumroh\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\paketumroh\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\paketumroh\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/paketumroh/index', [], true)
+ 5 APPPATH\Controllers\Admin\PaketumrohController.php(16): view('admin/paketumroh/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PaketumrohController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PaketumrohController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:28:06 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 08:42:24 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+DEBUG - 2025-04-13 09:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 09:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 09:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 09:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 09:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-13 09:32:35 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+DEBUG - 2025-04-13 10:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 11:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-13 12:00:42 --> ErrorException: Undefined variable $paket_umrah
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket_umrah', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 12:01:34 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: pendaftaran]
+in APPPATH\Views\admin\pendaftaran\index.php on line 57.
+ 1 APPPATH\Views\admin\pendaftaran\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/index', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(12): view('admin/pendaftaran/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-13 15:13:13 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\Admin/UserController::simpan"
+[Method: POST, Route: user/simpan]
+in SYSTEMPATH\Router\Router.php on line 494.
+ 1 SYSTEMPATH\Router\Router.php(494): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Admin/UserController::simpan')
+ 2 SYSTEMPATH\Router\Router.php(213): CodeIgniter\Router\Router->checkRoutes('user/simpan')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('user/simpan')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+DEBUG - 2025-04-13 15:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-13 15:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
