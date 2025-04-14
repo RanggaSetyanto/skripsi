@@ -17,7 +17,7 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-success">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="<?= base_url('dashboard')?>">
-                <img src="asset-admin/img/logo.png" alt="logo" style="height: 50px; width: auto;" class="me-2">
+                <img src="<?= base_url('asset-admin/img/logo.png') ?>" alt="logo" style="height: 50px; width: auto;" class="me-2">
                 <p1>Amanah Wisata Group</p1>
                 <!-- Sidebar Toggle-->
                 <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>

@@ -1,0 +1,319 @@
+DEBUG - 2025-04-14 05:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-14 05:15:28 --> ErrorException: Undefined variable $row
+[Method: GET, Route: user]
+in APPPATH\Views\admin\user\index.php on line 45.
+ 1 APPPATH\Views\admin\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\user\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/user/index', [], true)
+ 5 APPPATH\Controllers\Admin\UserController.php(27): view('admin/user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+ERROR - 2025-04-14 06:49:12 --> mysqli_sql_exception: Unknown column 'users.username' in 'field list' in C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaft...', 0)
+#1 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaft...')
+#2 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaft...')
+#3 C:\xampp\htdocs\skripsi-2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaft...', Array, false)
+#4 C:\xampp\htdocs\skripsi-2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skripsi-2\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\skripsi-2\app\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+#8 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+#9 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\skripsi-2\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\skripsi-2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\skripsi-2\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\skripsi-2\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-04-14 06:49:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+[Method: GET, Route: pendaftaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:49:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:49:12 --> [Caused by] mysqli_sql_exception: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+ERROR - 2025-04-14 06:49:57 --> mysqli_sql_exception: Unknown column 'users.username' in 'field list' in C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaft...', 0)
+#1 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaft...')
+#2 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaft...')
+#3 C:\xampp\htdocs\skripsi-2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaft...', Array, false)
+#4 C:\xampp\htdocs\skripsi-2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skripsi-2\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\skripsi-2\app\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+#8 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+#9 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\skripsi-2\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\skripsi-2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\skripsi-2\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\skripsi-2\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-04-14 06:49:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+[Method: GET, Route: pendaftaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:49:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:49:57 --> [Caused by] mysqli_sql_exception: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+ERROR - 2025-04-14 06:50:09 --> mysqli_sql_exception: Unknown column 'users.username' in 'field list' in C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\skripsi-2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaft...', 0)
+#1 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaft...')
+#2 C:\xampp\htdocs\skripsi-2\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaft...')
+#3 C:\xampp\htdocs\skripsi-2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaft...', Array, false)
+#4 C:\xampp\htdocs\skripsi-2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skripsi-2\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\skripsi-2\app\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+#8 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+#9 C:\xampp\htdocs\skripsi-2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\skripsi-2\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\skripsi-2\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\skripsi-2\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\skripsi-2\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-04-14 06:50:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+[Method: GET, Route: pendaftaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:50:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 06:50:09 --> [Caused by] mysqli_sql_exception: Unknown column 'users.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.*, `jamaah`.`nama_lengkap`, `jamaah`.`no_hp`, `paket_umrah`.`nama_paket`, `users`.`username`
+FROM `pendaftaran`
+JOIN `jamaah` ON `jamaah`.`id` = `pendaftaran`.`jamaah_id`
+JOIN `paket_umrah` ON `paket_umrah`.`id` = `pendaftaran`.`paket_umrah_id`
+JOIN `users` ON `users`.`id` = `pendaftaran`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PendaftaranController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-14 07:24:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "jamaah/index.php"
+[Method: GET, Route: jamaah]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('jamaah/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('jamaah/index', [], true)
+ 3 APPPATH\Controllers\Admin\JamaahController.php(15): view('jamaah/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\JamaahController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JamaahController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+DEBUG - 2025-04-14 07:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-14 07:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

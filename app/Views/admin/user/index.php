@@ -42,7 +42,7 @@
                                                     </td>
                                                     <td class="text-center">
                                                         <a href="<?= base_url('user/edit/' . $user['id']) ?>" class="btn btn-sm btn-warning">Edit</a>
-                                                        <a href="<?= base_url('user/hapus/' . $user['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus pengguna ini?')">Hapus</a>
+                                                        <a href="javascript:void(0);" onclick="konfirmasiHapus(<?= $user['id'] ?>)" class="btn btn-sm btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach ?>
@@ -102,3 +102,24 @@
     </main>
 
 <?= $this->endSection(); ?>
+<?= $this->section('script') ?>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function konfirmasiHapus(id) {
+        Swal.fire({
+            title: 'Yakin ingin menghapus?',
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= base_url('user/hapus') ?>/" + id;
+            }
+        });
+    }
+</script>
+<?= $this->endSection() ?>
