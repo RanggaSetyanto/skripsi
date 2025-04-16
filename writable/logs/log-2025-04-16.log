@@ -1,0 +1,48 @@
+CRITICAL - 2025-04-16 07:43:11 --> ErrorException: Undefined variable $pendaftaran
+[Method: GET, Route: pendaftaran/cetak/2]
+in APPPATH\Views\admin\pendaftaran\cetak.php on line 25.
+ 1 APPPATH\Views\admin\pendaftaran\cetak.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pendaftaran', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php', 25)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/cetak', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(118): view('admin/pendaftaran/cetak', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->cetak('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-16 07:47:25 --> ErrorException: Undefined array key "pendaftaran"
+[Method: GET, Route: pendaftaran/cetak/2]
+in APPPATH\Views\admin\pendaftaran\cetak.php on line 16.
+ 1 APPPATH\Views\admin\pendaftaran\cetak.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pendaftaran"', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/cetak', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(118): view('admin/pendaftaran/cetak', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->cetak('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+CRITICAL - 2025-04-16 07:53:04 --> ErrorException: Undefined variable $data
+[Method: GET, Route: pendaftaran/cetak/2]
+in APPPATH\Views\admin\pendaftaran\cetak.php on line 16.
+ 1 APPPATH\Views\admin\pendaftaran\cetak.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\skripsi-2\\app\\Views\\admin\\pendaftaran\\cetak.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pendaftaran/cetak', [], true)
+ 5 APPPATH\Controllers\Admin\PendaftaranController.php(118): view('admin/pendaftaran/cetak', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\PendaftaranController->cetak('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PendaftaranController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\skripsi-2\\public\\index.php')
+DEBUG - 2025-04-16 07:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-16 07:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-16 07:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

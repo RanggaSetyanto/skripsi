@@ -35,6 +35,7 @@ $routes->group('pendaftaran', ['namespace' => 'App\Controllers\Admin'], function
     $routes->get('edit/(:num)', 'PendaftaranController::edit/$1');
     $routes->post('update/(:num)', 'PendaftaranController::update/$1');
     $routes->get('delete/(:num)', 'PendaftaranController::delete/$1');
+    $routes->get('cetak/(:num)', 'PendaftaranController::cetak/$1');
 });
 
 // routes paket umroh

@@ -7,6 +7,8 @@ use App\Models\PendaftaranModel;
 use App\Models\JamaahModel;
 use App\Models\PaketUmrahModel;
 use App\Models\UserModel;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class PendaftaranController extends BaseController
 {
@@ -94,5 +96,36 @@ class PendaftaranController extends BaseController
     {
         $this->pendaftaranModel->delete($id);
         return redirect()->to('pendaftaran')->with('success', 'Data berhasil dihapus.');
+    }
+
+    public function cetak($id)
+    {
+        $data = $this->pendaftaranModel
+            ->select('pendaftaran.*, jamaah.nama_lengkap, jamaah.no_ktp, jamaah.no_hp, jamaah.email, jamaah.alamat, jamaah.tanggal_lahir, 
+                    paket_umrah.nama_paket, paket_umrah.tanggal_berangkat, paket_umrah.harga,
+                    users.nama_pengguna')
+            ->join('jamaah', 'jamaah.id = pendaftaran.jamaah_id')
+            ->join('paket_umrah', 'paket_umrah.id = pendaftaran.paket_umrah_id')
+            ->join('users', 'users.id = pendaftaran.user_id')
+            ->where('pendaftaran.id', $id)
+            ->first();
+
+        if (!$data) {
+            return redirect()->to('pendaftaran')->with('error', 'Data tidak ditemukan');
+        }
+
+        // Load HTML ke PDF
+        $html = view('admin/pendaftaran/cetak', ['pendaftaran' => $data]);
+
+        $options = new Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $dompdf = new Dompdf($options);
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        // Output PDF
+        $dompdf->stream("Pendaftaran-Umrah-{$data['nama_lengkap']}.pdf", ['Attachment' => false]);
+        exit();
     }
 }
