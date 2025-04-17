@@ -18,6 +18,14 @@ class CreateJamaahTable extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
             ],
+            'jenis_kelamin'  => [ 
+                'type'       => 'ENUM',
+                'constraint' => ['Laki-laki', 'Perempuan'],
+            ],
+            'nama_ortu'   => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
             'no_ktp'         => [
                 'type'       => 'VARCHAR',
                 'constraint' => 20,
@@ -31,17 +39,46 @@ class CreateJamaahTable extends Migration
                 'constraint' => 100,
                 'null'       => true,
             ],
-            'alamat'         => [
-                'type' => 'TEXT',
+            'tempat_lahir'   => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
             ],
             'tanggal_lahir'  => [
                 'type' => 'DATE',
             ],
-            'created_at' => [
+            'alamat'         => [
+                'type' => 'TEXT',
+            ],
+            'kelurahan'      => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+                'null'       => true,
+            ],
+            'kecamatan'      => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+                'null'       => true,
+            ],
+            'kabupaten'      => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+                'null'       => true,
+            ],
+            'propinsi'       => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+                'null'       => true,
+            ],
+            'kode_pos'       => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 10,
+                'null'       => true,
+            ],
+            'created_at'     => [
                 'type'    => 'DATETIME',
                 'null'    => true,
             ],
-            'updated_at' => [
+            'updated_at'     => [
                 'type'    => 'DATETIME',
                 'null'    => true,
             ],

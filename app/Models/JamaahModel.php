@@ -11,11 +11,19 @@ class JamaahModel extends Model
 
     protected $allowedFields    = [
         'nama_lengkap',
+        'jenis_kelamin',
+        'nama_ortu',
         'no_ktp',
         'no_hp',
         'email',
-        'alamat',
+        'tempat_lahir',
         'tanggal_lahir',
+        'alamat',
+        'kelurahan',
+        'kecamatan',
+        'kabupaten',
+        'provinsi',
+        'kode_pos',
     ];
 
     protected $useTimestamps    = true;

@@ -23,11 +23,13 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Lengkap</th>
+                                    <th>jenis Kelamin</th>
+                                    <th>Nama Orang Tua</th>
                                     <th>No KTP</th>
                                     <th>No HP</th>
                                     <th>Email</th>
+                                    <th>TTL</th>
                                     <th>Alamat</th>
-                                    <th>Tanggal Lahir</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -37,11 +39,20 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= esc($data['nama_lengkap']) ?></td>
+                                            <td><?= esc($data['jenis_kelamin']) ?></td>
+                                            <td><?= esc($data['nama_ortu']) ?></td>
                                             <td><?= esc($data['no_ktp']) ?></td>
                                             <td><?= esc($data['no_hp']) ?></td>
                                             <td><?= esc($data['email']) ?></td>
-                                            <td><?= esc($data['alamat']) ?></td>
-                                            <td><?= date('d-m-Y', strtotime($data['tanggal_lahir'])) ?></td>
+                                            <td><?= esc($data['tempat_lahir']) . ', ' . date('d-m-Y', strtotime($data['tanggal_lahir'])) ?></td>
+                                            <td>
+                                                <?= esc($data['alamat']) ?>, 
+                                                Kelurahan <?= esc($data['kelurahan']) ?>, 
+                                                Kecamatan <?= esc($data['kecamatan']) ?>, 
+                                                Kabupaten <?= esc($data['kabupaten']) ?>, 
+                                                Propinsi <?= esc($data['propinsi']) ?>, 
+                                                Kode Pos <?= esc($data['kode_pos']) ?>
+                                            </td>
                                             <td>
                                                 <a href="<?= base_url('jamaah/edit/' . $data['id']) ?>" class="btn btn-sm btn-warning rounded-pill">Edit</a>
                                                 <a href="<?= base_url('jamaah/hapus/' . $data['id']) ?>" class="btn btn-sm btn-danger rounded-pill" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
@@ -50,7 +61,7 @@
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <tr>
-                                        <td colspan="8" class="text-center">Belum ada data jamaah.</td>
+                                        <td colspan="10" class="text-center">Belum ada data jamaah.</td>
                                     </tr>
                                 <?php endif ?>
                             </tbody>

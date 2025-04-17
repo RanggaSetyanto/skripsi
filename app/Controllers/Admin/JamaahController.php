@@ -3,7 +3,6 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\JamaahModel;
 
 class JamaahController extends BaseController
@@ -26,11 +25,19 @@ class JamaahController extends BaseController
 
         $data = [
             'nama_lengkap' => $this->request->getPost('nama_lengkap'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'nama_ortu' => $this->request->getPost('nama_ortu'),
             'no_ktp' => $this->request->getPost('no_ktp'),
             'no_hp' => $this->request->getPost('no_hp'),
             'email' => $this->request->getPost('email'),
-            'alamat' => $this->request->getPost('alamat'),
+            'tempat_lahir' => $this->request->getPost('tempat_lahir'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'alamat' => $this->request->getPost('alamat'),
+            'kelurahan' => $this->request->getPost('kelurahan'), 
+            'kecamatan' => $this->request->getPost('kecamatan'), 
+            'kabupaten' => $this->request->getPost('kabupaten'), 
+            'propinsi' => $this->request->getPost('propinsi'), 
+            'kode_pos' => $this->request->getPost('kode_pos'), 
         ];
 
         $jamaahModel->save($data);
@@ -56,11 +63,19 @@ class JamaahController extends BaseController
 
         $data = [
             'nama_lengkap' => $this->request->getPost('nama_lengkap'),
+            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
+            'nama_ortu' => $this->request->getPost('nama_ortu'),
             'no_ktp' => $this->request->getPost('no_ktp'),
             'no_hp' => $this->request->getPost('no_hp'),
             'email' => $this->request->getPost('email'),
-            'alamat' => $this->request->getPost('alamat'),
+            'tempat_lahir' => $this->request->getPost('tempat_lahir'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'alamat' => $this->request->getPost('alamat'),
+            'kelurahan' => $this->request->getPost('kelurahan'), 
+            'kecamatan' => $this->request->getPost('kecamatan'), 
+            'kabupaten' => $this->request->getPost('kabupaten'), 
+            'propinsi' => $this->request->getPost('propinsi'), 
+            'kode_pos' => $this->request->getPost('kode_pos'), 
         ];
 
         $jamaahModel->update($id, $data);
