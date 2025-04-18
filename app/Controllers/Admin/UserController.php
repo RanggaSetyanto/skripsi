@@ -3,7 +3,6 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\UserModel;
 
 class UserController extends BaseController
@@ -41,43 +40,75 @@ class UserController extends BaseController
     {
         $userModel = new UserModel();
 
+        // Validasi input
+        $validationRules = [
+            'foto' => 'uploaded[foto]|is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]|max_size[foto,2048]',
+            'nama_pengguna' => 'required|min_length[3]|max_length[50]',
+            'kata_sandi'    => 'required|min_length[6]',
+            'peran'         => 'required'
+        ];
+
+        if (!$this->validate($validationRules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Ambil file foto dari request
+        $foto = $this->request->getFile('foto');
+        $namaFoto = null;
+
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+            $namaFoto = $foto->getRandomName();
+            $foto->move('uploads/foto_user/', $namaFoto);
+        }
+
+        // Simpan data user
         $userModel->save([
+            'foto' => $namaFoto,
             'nama_pengguna' => $this->request->getPost('nama_pengguna'),
-            'kata_sandi' => $this->request->getPost('kata_sandi'),
-            'peran' => $this->request->getPost('peran'),
+            'kata_sandi'    => $this->request->getPost('kata_sandi'),
+            'peran'         => $this->request->getPost('peran'),
         ]);
 
         return redirect()->to('/user');
-    }
-
-    public function edit($id)
-    {
-        $userModel = new UserModel();
-            $user = $userModel->find($id);
-
-            // Kirim data pengguna yang akan diedit dan daftar semua pengguna
-            return view('admin/user/index', [
-                'users' => $userModel->findAll(), // Kirim semua pengguna untuk daftar
-                'editData' => $user // Kirim data pengguna yang akan diedit
-            ]);
     }
 
     public function perbarui($id)
     {
         $userModel = new UserModel();
 
+        // Validasi input
+        $validationRules = [
+            'foto' => 'is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]|max_size[foto,2048]',
+            'nama_pengguna' => 'required|min_length[3]|max_length[50]',
+            'kata_sandi'    => 'permit_empty|min_length[6]',
+            'peran'         => 'required'
+        ];
+
+        if (!$this->validate($validationRules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Ambil data yang diinput
         $data = [
             'id' => $id,
             'nama_pengguna' => $this->request->getPost('nama_pengguna'),
-            'peran' => $this->request->getPost('peran')
+            'peran' => $this->request->getPost('peran'),
         ];
 
-        // Update password jika diisi
         $password = $this->request->getPost('kata_sandi');
         if (!empty($password)) {
             $data['kata_sandi'] = $password;
         }
 
+        // Handle foto baru (jika ada)
+        $foto = $this->request->getFile('foto');
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+            $namaFoto = $foto->getRandomName();
+            $foto->move('uploads/foto_user/', $namaFoto);
+            $data['foto'] = $namaFoto;
+        }
+
+        // Update data pengguna
         $userModel->save($data);
 
         return redirect()->to('/user');
@@ -106,7 +137,7 @@ class UserController extends BaseController
 
         $password = $this->request->getPost('kata_sandi');
         if (!empty($password)) {
-            $data['kata_sandi'] = password_hash($password, PASSWORD_DEFAULT);
+            $data['kata_sandi'] = $password;
         }
 
         $userModel->update($userId, $data);

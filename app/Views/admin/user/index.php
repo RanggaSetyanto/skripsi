@@ -40,6 +40,7 @@
                                     <thead class="table-striped text-center">
                                         <tr>
                                             <th scope="col">No</th>
+                                            <th scope="col">Foto</th>
                                             <th scope="col">Nama Pengguna</th>
                                             <th scope="col">Peran</th>
                                             <th scope="col">Aksi</th>
@@ -50,6 +51,13 @@
                                             <?php foreach ($users as $index => $user) : ?>
                                                 <tr>
                                                     <td class="text-center"><?= $index + 1 ?></td>
+                                                    <td class="text-center">
+                                                        <?php if (!empty($user['foto'])) : ?>
+                                                            <img src="<?= base_url('uploads/foto_user/' . $user['foto']) ?>" alt="Foto" width="40" height="40" class="rounded-circle">
+                                                        <?php else : ?>
+                                                            <span class="text-muted">-</span>
+                                                        <?php endif ?>
+                                                    </td>
                                                     <td><?= esc($user['nama_pengguna']) ?></td>
                                                     <td class="text-center">
                                                         <span class="badge <?= $user['peran'] === 'admin' ? 'bg-success' : 'bg-secondary' ?>">
@@ -58,7 +66,7 @@
                                                     </td>
                                                     <td class="text-center">
                                                         <a href="javascript:void(0);" class="btn btn-sm btn-warning"
-                                                           onclick="bukaModalEdit(<?= $user['id'] ?>, '<?= esc($user['nama_pengguna']) ?>', '<?= $user['peran'] ?>')">
+                                                        onclick="bukaModalEdit(<?= $user['id'] ?>, '<?= esc($user['nama_pengguna']) ?>', '<?= $user['peran'] ?>', '<?= esc($user['foto'] ?? '') ?>')">
                                                             Edit
                                                         </a>
                                                         <a href="javascript:void(0);" onclick="konfirmasiHapus(<?= $user['id'] ?>)" class="btn btn-sm btn-danger">Hapus</a>
@@ -67,7 +75,7 @@
                                             <?php endforeach ?>
                                         <?php else : ?>
                                             <tr>
-                                                <td colspan="4" class="text-center">Tidak ada data pengguna.</td>
+                                                <td colspan="5" class="text-center">Tidak ada data pengguna.</td>
                                             </tr>
                                         <?php endif ?>
                                     </tbody>
@@ -81,7 +89,7 @@
             <!-- Modal Form Tambah/Edit Pengguna -->
             <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <form id="userForm" method="post">
+                    <form id="userForm" method="post" enctype="multipart/form-data">
                         <?= csrf_field() ?>
                         <div class="modal-content">
                             <div class="modal-header">
@@ -89,21 +97,55 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
+                                <!-- Menampilkan error global -->
+                                <?php if (session()->getFlashdata('errors')) : ?>
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            <?php foreach (session()->getFlashdata('errors') as $error) : ?>
+                                                <li><?= esc($error) ?></li>
+                                            <?php endforeach ?>
+                                        </ul>
+                                    </div>
+                                <?php endif ?>
+
                                 <input type="hidden" name="id" id="id">
+                                
+                                <!-- Input Foto -->
+                                <div class="mb-3">
+                                    <label>Foto (opsional)</label>
+                                    <input type="file" name="foto" id="foto" class="form-control">
+                                    <?= isset($validation) && $validation->getError('foto') ? '<div class="text-danger">' . $validation->getError('foto') . '</div>' : '' ?>
+                                </div>
+
+                                <!-- Preview Foto -->
+                                <div class="mb-3">
+                                    <label>Foto Saat Ini</label><br>
+                                    <!-- Foto preview akan ditampilkan di sini jika ada foto -->
+                                    <img id="fotoPreview" src="" alt="Foto Pengguna" class="img-fluid rounded-circle" style="max-width: 100px; display: none;">
+                                </div>
+                                
+                                <!-- Input Nama Pengguna -->
                                 <div class="mb-3">
                                     <label>Nama Pengguna</label>
-                                    <input type="text" name="nama_pengguna" id="nama_pengguna" class="form-control" required>
+                                    <input type="text" name="nama_pengguna" id="nama_pengguna" class="form-control" value="<?= old('nama_pengguna') ?>" required>
+                                    <?= isset($validation) && $validation->getError('nama_pengguna') ? '<div class="text-danger">' . $validation->getError('nama_pengguna') . '</div>' : '' ?>
                                 </div>
+
+                                <!-- Input Kata Sandi -->
                                 <div class="mb-3">
                                     <label>Kata Sandi <span id="password_note" class="text-muted"></span></label>
                                     <input type="password" name="kata_sandi" id="kata_sandi" class="form-control">
+                                    <?= isset($validation) && $validation->getError('kata_sandi') ? '<div class="text-danger">' . $validation->getError('kata_sandi') . '</div>' : '' ?>
                                 </div>
+
+                                <!-- Input Peran -->
                                 <div class="mb-3">
                                     <label>Peran</label>
                                     <select name="peran" id="peran" class="form-select" required>
                                         <option value="admin">Admin</option>
                                         <option value="staf">Staf</option>
                                     </select>
+                                    <?= isset($validation) && $validation->getError('peran') ? '<div class="text-danger">' . $validation->getError('peran') . '</div>' : '' ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -161,10 +203,12 @@
         document.getElementById("userModalLabel").innerText = "Tambah Pengguna";
         document.getElementById("userForm").action = "<?= base_url('user/simpan') ?>";
         document.getElementById("id").value = "";
+        document.getElementById("foto").value = "";
+        document.getElementById("fotoPreview").style.display = "none";
         document.getElementById("nama_pengguna").value = "";
         document.getElementById("kata_sandi").value = "";
         document.getElementById("kata_sandi").required = true;
-        document.getElementById("password_note").innerText = "";
+        document.getElementById("password_note").innerText = "(masukkan minimal 8 karakter)";
         document.getElementById("peran").value = "admin";
     }
 
@@ -177,6 +221,15 @@
         document.getElementById("kata_sandi").required = false;
         document.getElementById("password_note").innerText = "(Kosongkan jika tidak diganti)";
         document.getElementById("peran").value = peran;
+
+        // Menampilkan foto saat ini (jika ada)
+        var fotoPreview = document.getElementById("fotoPreview");
+        if (foto && foto !== '') {
+            fotoPreview.src = "<?= base_url('uploads/foto_user/') ?>/" + foto;
+            fotoPreview.style.display = "block"; // Menampilkan gambar
+        } else {
+            fotoPreview.style.display = "none"; // Menyembunyikan gambar jika tidak ada foto
+        }
 
         var modal = new bootstrap.Modal(document.getElementById('userModal'));
         modal.show();

@@ -6,8 +6,8 @@
         <div class="container-fluid px-4">
                 <h1 class="mt-4">Pendaftaran</h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Pendaftaran</li>
+                    <li class="breadcrumb-item"><a>Pendaftaran</a></li>
+                    <li class="breadcrumb-item active">Data Pendaftaran</li>
                 </ol>
 
                 <div class="card mb-4 shadow rounded-4">

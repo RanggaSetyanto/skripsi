@@ -3,11 +3,12 @@
 <?= $this->Section('content'); ?>
 <div id="layoutSidenav_content">
     <main>
+    <div class="container-fluid px-4">
         <div class="container mt-5">
             <h1 class="mt-4">Paket Umrah</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="<?= base_url('dashboard')?>">Dashboard</a></li>
-                <li class="breadcrumb-item active">Paket Umrah</li>
+                <li class="breadcrumb-item"><a>Paket Umroh</a></li>
+                <li class="breadcrumb-item active">Daftar Paket Umrah</li>
             </ol>
             <div class="container mt-4">
                 <h2 class="text-center mb-4">Daftar Paket Umrah</h2>
@@ -44,5 +45,6 @@
                 <?php endif; ?>
             </div>
         </div>
+    </div>        
     </main>
 <?= $this->endSection(); ?>

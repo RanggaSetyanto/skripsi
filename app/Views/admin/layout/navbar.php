@@ -20,12 +20,12 @@
                             </div>
                             <a class="nav-link collapsed text-dark" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon text-dark"><i class="fas fa-book-open"></i></div>
-                                Paket
+                                Paket Umroh
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link text-dark" href="<?= base_url('paketumroh')?>">Paket Umroh</a>
+                                    <a class="nav-link text-dark" href="<?= base_url('paketumroh')?>">Daftar Paket Umroh</a>
                                     <a class="nav-link text-dark" href="<?= base_url('datapaket')?>">Data Paket Umroh</a>
                                 </nav>
                             </div>

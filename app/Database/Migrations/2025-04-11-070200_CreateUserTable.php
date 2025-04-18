@@ -10,6 +10,7 @@ class CreateUserTable extends Migration
     {
         $this->forge->addField([
             'id'         => ['type' => 'INT', 'unsigned' => true, 'auto_increment' => true],
+            'foto'          => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'nama_pengguna' => ['type' => 'VARCHAR', 'constraint' => 50],
             'kata_sandi'    => ['type' => 'VARCHAR', 'constraint' => 255],
             'peran'         => ['type' => 'ENUM("admin","staf")', 'default' => 'staf'],

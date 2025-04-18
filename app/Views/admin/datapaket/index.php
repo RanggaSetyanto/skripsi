@@ -7,7 +7,7 @@
             <div class="container mt-4">
                 <h1 class="mt-4">Data Paket</h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a>Paket Umrah</a></li>
                     <li class="breadcrumb-item active">Data Paket</li>
                 </ol>
 
