@@ -12,7 +12,15 @@ class UserController extends BaseController
     {
         $userModel = new UserModel();
 
-        // Ambil data pengguna untuk ditampilkan
+        // Ambil keyword pencarian (jika ada)
+        $keyword = $this->request->getGet('q');
+
+        // Jika keyword ada, lakukan pencarian
+        if ($keyword) {
+            $userModel->like('nama_pengguna', $keyword);
+        }
+
+        // Ambil data pengguna (baik hasil pencarian atau semua data)
         $users = $userModel->findAll();
 
         // Cek apakah ada request edit
@@ -24,7 +32,8 @@ class UserController extends BaseController
 
         return view('admin/user/index', [
             'users' => $users,
-            'editData' => $editData // Hanya ada jika kita sedang mengedit pengguna
+            'editData' => $editData,
+            'keyword' => $keyword // Untuk mengisi ulang kolom pencarian di view
         ]);
     }
 
@@ -72,6 +81,37 @@ class UserController extends BaseController
         $userModel->save($data);
 
         return redirect()->to('/user');
+    }
+
+    public function profile()
+    {
+        $session = session();
+        $userId = $session->get('id'); // Pastikan session menyimpan ID user
+
+        $userModel = new UserModel();
+        $user = $userModel->find($userId);
+
+        return view('admin/user/profile', ['user' => $user]);
+    }
+
+    public function updateProfile()
+    {
+        $session = session();
+        $userId = $session->get('id');
+
+        $userModel = new UserModel();
+        $data = [
+            'nama_pengguna' => $this->request->getPost('nama_pengguna'),
+        ];
+
+        $password = $this->request->getPost('kata_sandi');
+        if (!empty($password)) {
+            $data['kata_sandi'] = password_hash($password, PASSWORD_DEFAULT);
+        }
+
+        $userModel->update($userId, $data);
+
+        return redirect()->to('profile')->with('success', 'Profil berhasil diperbarui.');
     }
 
     public function hapus($id)

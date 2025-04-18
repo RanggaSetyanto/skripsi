@@ -16,6 +16,8 @@ $routes->post('user/simpan', 'Admin\UserController::simpan');
 $routes->get('user/edit/(:num)', 'Admin\UserController::edit/$1');
 $routes->post('user/perbarui/(:num)', 'Admin\UserController::perbarui/$1');
 $routes->get('user/hapus/(:num)', 'Admin\UserController::hapus/$1');
+$routes->get('user/profile', 'Admin\UserController::profile');
+$routes->post('user/profile/updateProfil', 'Admin\UserController::updateProfile');
 
 // routes data jamaah
 $routes->group('jamaah', ['namespace' => 'App\Controllers\Admin'], function($routes) {
