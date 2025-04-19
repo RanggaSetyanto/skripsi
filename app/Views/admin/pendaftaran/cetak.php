@@ -32,7 +32,7 @@
                     Kelurahan:  <?= $pendaftaran['kelurahan'] ?><br>
                     Kecamatan:  <?= $pendaftaran['kecamatan'] ?><br>
                     Kabupaten:  <?= $pendaftaran['kabupaten'] ?><br>
-                    Propinsi :  <?= $pendaftaran['provinsi'] ?><br>
+                    Provinsi :  <?= $pendaftaran['provinsi'] ?><br>
                     Kode Pos :  <?= $pendaftaran['kode_pos'] ?><br>
                     Telp (Rumah / HP) : <?= $pendaftaran['no_hp'] ?>
                 </td></tr>

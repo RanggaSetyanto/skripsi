@@ -10,9 +10,10 @@ class CreatePembayaranTable extends Migration
     {
         $this->forge->addField([
             'id'                 => ['type' => 'INT', 'unsigned' => true, 'auto_increment' => true],
-            'pendaftaran_id'     => ['type' => 'INT', 'unsigned' => true],
+            'pendaftaran_id'     => ['type' => 'INT', 'unsigned' => true], 
             'user_id'            => ['type' => 'INT', 'unsigned' => true], // <== admin/staf yang input
             'jumlah_pembayaran'  => ['type' => 'INT'],
+            'metode_pembayaran'  => ['type' => 'ENUM("Cash","Cicilan")', 'default' => 'Cash'],
             'tanggal_pembayaran' => ['type' => 'DATE'],
             'bukti_pembayaran'   => ['type' => 'VARCHAR', 'constraint' => 255],
             'created_at'         => ['type' => 'DATETIME', 'null' => true],

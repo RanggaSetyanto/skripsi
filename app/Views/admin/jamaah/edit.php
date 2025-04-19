@@ -64,6 +64,11 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                            <input type="text" name="pekerjaaan" class="form-control" value="<?= esc($jamaah['pekerjaan']) ?>" required>
+                        </div>
+
+                        <div class="mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
                             <textarea name="alamat" class="form-control" required><?= esc($jamaah['alamat']) ?></textarea>
                         </div>
@@ -84,8 +89,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="propinsi" class="form-label">Provinsi</label>
-                            <input type="text" name="propinsi" class="form-control" value="<?= esc($jamaah['propinsi']) ?>" required>
+                            <label for="provinsi" class="form-label">Provinsi</label>
+                            <input type="text" name="provinsi" class="form-control" value="<?= esc($jamaah['provinsi']) ?>" required>
                         </div>
 
                         <div class="mb-3">

@@ -32,11 +32,12 @@ class JamaahController extends BaseController
             'email' => $this->request->getPost('email'),
             'tempat_lahir' => $this->request->getPost('tempat_lahir'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'pekerjaan' => $this->request->getPost('pekerjaan'),
             'alamat' => $this->request->getPost('alamat'),
             'kelurahan' => $this->request->getPost('kelurahan'), 
             'kecamatan' => $this->request->getPost('kecamatan'), 
             'kabupaten' => $this->request->getPost('kabupaten'), 
-            'propinsi' => $this->request->getPost('propinsi'), 
+            'provinsi' => $this->request->getPost('provinsi'), 
             'kode_pos' => $this->request->getPost('kode_pos'), 
         ];
 
@@ -70,11 +71,12 @@ class JamaahController extends BaseController
             'email' => $this->request->getPost('email'),
             'tempat_lahir' => $this->request->getPost('tempat_lahir'),
             'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+            'pekerjaan' => $this->request->getPost('pekerjaan'),
             'alamat' => $this->request->getPost('alamat'),
             'kelurahan' => $this->request->getPost('kelurahan'), 
             'kecamatan' => $this->request->getPost('kecamatan'), 
             'kabupaten' => $this->request->getPost('kabupaten'), 
-            'propinsi' => $this->request->getPost('propinsi'), 
+            'provinsi' => $this->request->getPost('provinsi'), 
             'kode_pos' => $this->request->getPost('kode_pos'), 
         ];
 

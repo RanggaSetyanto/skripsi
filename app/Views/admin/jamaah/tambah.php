@@ -56,6 +56,10 @@
                                 <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
                                 <input type="date" name="tanggal_lahir" class="form-control" required>
                             </div>
+                            <div class="col-md-6">
+                                <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                                <input type="text" name="pekerjaan" class="form-control" required>
+                            </div>
                             <div class="col-md-12">
                                 <label for="alamat" class="form-label">Alamat</label>
                                 <textarea name="alamat" class="form-control" required></textarea>

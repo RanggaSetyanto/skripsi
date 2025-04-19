@@ -18,6 +18,7 @@ class JamaahModel extends Model
         'email',
         'tempat_lahir',
         'tanggal_lahir',
+        'pekerjaan',
         'alamat',
         'kelurahan',
         'kecamatan',

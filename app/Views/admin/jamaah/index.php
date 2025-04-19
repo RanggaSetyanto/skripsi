@@ -11,15 +11,15 @@
             </ol>
 
             <div class="card mb-4 shadow rounded-4">
-                <div class="card-header bg-primary text-white rounded-top-4">
+                <div class="card-header bg-light text-black rounded-top-4">
                     <i class="fas fa-table me-1"></i>
                     Data Jamaah
                 </div>
                 <div class="card-body">
-                    <a href="<?= base_url('jamaah/tambah') ?>" class="btn btn-success mb-3 rounded-pill px-4">Tambah Jamaah</a>
+                    <a href="<?= base_url('jamaah/tambah') ?>" class="btn btn-primary mb-3 rounded-pill px-4">Tambah Jamaah</a>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped align-middle">
-                            <thead class="table-dark">
+                            <thead class="table-striped">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Lengkap</th>
@@ -29,6 +29,7 @@
                                     <th>No HP</th>
                                     <th>Email</th>
                                     <th>TTL</th>
+                                    <th>Pekerjaan</th>
                                     <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -45,12 +46,13 @@
                                             <td><?= esc($data['no_hp']) ?></td>
                                             <td><?= esc($data['email']) ?></td>
                                             <td><?= esc($data['tempat_lahir']) . ', ' . date('d-m-Y', strtotime($data['tanggal_lahir'])) ?></td>
+                                            <td><?= esc($data['pekerjaan']) ?></td></td>
                                             <td>
                                                 <?= esc($data['alamat']) ?>, 
                                                 Kelurahan <?= esc($data['kelurahan']) ?>, 
                                                 Kecamatan <?= esc($data['kecamatan']) ?>, 
                                                 Kabupaten <?= esc($data['kabupaten']) ?>, 
-                                                Propinsi <?= esc($data['propinsi']) ?>, 
+                                                Provinsi <?= esc($data['provinsi']) ?>, 
                                                 Kode Pos <?= esc($data['kode_pos']) ?>
                                             </td>
                                             <td>
@@ -61,7 +63,7 @@
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <tr>
-                                        <td colspan="10" class="text-center">Belum ada data jamaah.</td>
+                                        <td colspan="11" class="text-center">Belum ada data jamaah.</td>
                                     </tr>
                                 <?php endif ?>
                             </tbody>

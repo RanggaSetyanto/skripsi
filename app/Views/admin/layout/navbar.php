@@ -18,6 +18,11 @@
                                     <a class="nav-link text-dark" href="<?= base_url('jamaah')?>">Data Jamaah</a>
                                 </nav>
                             </div>
+                            
+                            <a class="nav-link text-dark" href="<?= base_url('pembayaran')?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
+                                Pembayaran
+                            </a>
                             <a class="nav-link collapsed text-dark" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon text-dark"><i class="fas fa-book-open"></i></div>
                                 Paket Umroh
@@ -39,10 +44,6 @@
                                     <a class="nav-link text-dark" href="<?= base_url('user')?>">Data User</a>
                                 </nav>
                             </div>
-                            <a class="nav-link text-dark" href="<?= base_url('dashboard')?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
                         </div>
                     </div>
                 </nav>

@@ -46,6 +46,10 @@ class CreateJamaahTable extends Migration
             'tanggal_lahir'  => [
                 'type' => 'DATE',
             ],
+            'pekerjaan'      => [ 
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
             'alamat'         => [
                 'type' => 'TEXT',
             ],
@@ -64,7 +68,7 @@ class CreateJamaahTable extends Migration
                 'constraint' => 100,
                 'null'       => true,
             ],
-            'propinsi'       => [ 
+            'provinsi'       => [ 
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
                 'null'       => true,

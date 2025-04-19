@@ -5,10 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Admin\DashboardController::index');
 
 // routes admin dashboard
-$routes->get('dashboard','Admin\dashboardController::index');
+$routes->get('dashboard','Admin\DashboardController::index');
 
 // routes data user
 $routes->get('user','Admin\UserController::index');
@@ -38,6 +38,16 @@ $routes->group('pendaftaran', ['namespace' => 'App\Controllers\Admin'], function
     $routes->post('update/(:num)', 'PendaftaranController::update/$1');
     $routes->get('delete/(:num)', 'PendaftaranController::delete/$1');
     $routes->get('cetak/(:num)', 'PendaftaranController::cetak/$1');
+});
+
+// routes pembayaran
+$routes->group('pembayaran', ['namespace' => 'App\Controllers\Admin'], function($routes) {
+    $routes->get('/', 'PembayaranController::index');
+    $routes->post('simpan', 'PembayaranController::simpan');
+    $routes->get('getHarga/(:num)', 'PembayaranController::getHarga/$1');
+    $routes->get('edit/(:num)', 'PembayaranController::edit/$1');
+    $routes->post('update/(:num)', 'PembayaranController::update/$1');
+    $routes->get('hapus/(:num)', 'PembayaranController::hapus/$1');
 });
 
 // routes paket umroh
