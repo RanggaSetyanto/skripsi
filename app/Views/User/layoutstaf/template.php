@@ -17,7 +17,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-success">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="<?= base_url('dashboard')?>">
+            <a class="navbar-brand ps-3" href="<?= base_url('dashboardstaf')?>">
                 <img src="<?= base_url('asset-admin/img/logo.png') ?>" alt="logo" style="height: 50px; width: auto;" class="me-2">
                 <p1>Amanah Wisata Group</p1>
                 <!-- Sidebar Toggle-->
@@ -46,7 +46,7 @@
             </ul>
         </nav>
         <div id="layoutSidenav">
-           <?= $this->include('admin/layout/navbar');?>
+           <?= $this->include('User/layoutstaf/navbar');?>
 
             <!-- render halaman content -->
             <?= $this->renderSection('content'); ?>
