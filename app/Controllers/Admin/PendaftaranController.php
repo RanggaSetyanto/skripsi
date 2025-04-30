@@ -101,7 +101,7 @@ class PendaftaranController extends BaseController
     public function cetak($id)
     {
         $data = $this->pendaftaranModel
-            ->select('pendaftaran.*, jamaah.nama_lengkap, jamaah.jenis_kelamin, jamaah.nama_ortu, jamaah.no_ktp, jamaah.no_hp, jamaah.email, jamaah.tempat_lahir, jamaah.tanggal_lahir, jamaah.alamat, jamaah.kelurahan, jamaah.kecamatan, jamaah.kabupaten, jamaah.provinsi, jamaah.kode_pos,
+            ->select('pendaftaran.*, jamaah.nama_lengkap, jamaah.jenis_kelamin, jamaah.nama_ortu, jamaah.no_ktp, jamaah.no_hp, jamaah.email, jamaah.tempat_lahir, jamaah.tanggal_lahir, jamaah.pekerjaan, jamaah.alamat, jamaah.kelurahan, jamaah.kecamatan, jamaah.kabupaten, jamaah.provinsi, jamaah.kode_pos,
                     paket_umrah.nama_paket, paket_umrah.tanggal_berangkat, paket_umrah.harga,
                     users.nama_pengguna')
             ->join('jamaah', 'jamaah.id = pendaftaran.jamaah_id')
@@ -119,6 +119,7 @@ class PendaftaranController extends BaseController
 
         $options = new Options();
         $options->set('isHtml5ParserEnabled', true);
+        // $options->set('isRemoteEnabled', true);
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');

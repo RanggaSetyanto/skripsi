@@ -51,7 +51,6 @@
                                                 <td class="d-flex flex-wrap gap-1">
                                                     <a href="<?= base_url('pendaftaranstaf/edit/' . $data['id']) ?>" class="btn btn-sm btn-warning rounded-pill">Edit</a>
                                                     <a href="<?= base_url('pendaftaranstaf/delete/' . $data['id']) ?>" class="btn btn-sm btn-danger rounded-pill" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
-                                                    <a href="<?= base_url('pendaftaranstaf/cetak/' . $data['id']) ?>" target="_blank" class="btn btn-sm btn-secondary rounded-pill">Cetak PDF</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
