@@ -142,7 +142,7 @@ class UserController extends BaseController
 
         $userModel->update($userId, $data);
 
-        return redirect()->to('profile')->with('success', 'Profil berhasil diperbarui.');
+        return redirect()->to('dashboard')->with('success', 'Profil berhasil diperbarui.');
     }
 
     public function hapus($id)

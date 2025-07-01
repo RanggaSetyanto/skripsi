@@ -1,4 +1,4 @@
-<?= $this->extend('User/layoutstaf/template'); ?>
+<?= $this->extend('User/layoutstaf/navbar'); ?>
 
 <?= $this->Section('content'); ?>
 

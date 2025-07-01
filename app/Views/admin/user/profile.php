@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layout/template'); ?>
+<?= $this->extend('admin/layout/navbar'); ?>
 
 <?= $this->Section('content'); ?>
 <div id="layoutSidenav_content">
@@ -18,7 +18,7 @@
                         <div class="card-header bg-primary text-white">
                             <h5 class="mb-0">Edit Profil</h5>
                         </div>
-                        <form action="<?= base_url('user/updateProfil') ?>" method="post">
+                        <form action="<?= base_url('user/profile/updateProfil') ?>" method="post">
                             <?= csrf_field() ?>
                             <div class="card-body">
                                 <div class="mb-3">

@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layout/template'); ?>
+<?= $this->extend('admin/layout/navbar'); ?>
 
 <?= $this->section('content'); ?>
 <div id="layoutSidenav_content">

@@ -112,16 +112,6 @@
     </tr>
 </table>
 
-<div class="box">
-    <u>Lampiran Pendaftaran:</u>
-    <ol>
-        <li>Menyerahkan pas photo terbaru berwarna</li>
-        <li>Fotokopi dokumen: KTP, KK & Akta Nikah</li>
-        <li>Paspor berlaku minimal 7 bulan</li>
-        <li>Melunasi pembayaran sesuai paket</li>
-    </ol>
-</div>
-
 <div class="ttd">
     <p>Kudus, <?= date('d F Y') ?></p>
     <p>Calon Jamaah,</p>
